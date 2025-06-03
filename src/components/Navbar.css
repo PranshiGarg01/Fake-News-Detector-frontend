@@ -1,0 +1,45 @@
+.navbar {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 79px;
+  background: linear-gradient(90deg, #088685 0%, #E78FC0 100%);
+  box-sizing: border-box;
+}
+
+.navbar-left {
+  font-family: 'Merienda One', cursive;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  color: #FDFDFF;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #FDFDFF;
+  text-decoration: none;
+  padding: 0 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar-link:not(:last-child)::after {
+  content: '';
+  height: 28px;
+  width: 1.5px;
+  background-color: #FDFDFF;
+  opacity: 0.5;
+  margin-left: 26px;
+}
