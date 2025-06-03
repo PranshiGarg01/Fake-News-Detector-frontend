@@ -1,26 +1,27 @@
 /* Overall Page */
-.aboutus1 {
+.aboutus_bg{
   width: 100%;
-  height: 900px;
+  max-width: 1920px;
+  height: 547px;
   background: linear-gradient(261.73deg, #FBB3DB 1.27%, #FFE8F5 48.66%, #FBB3DB 96.97%);
   position: relative;
   overflow: hidden;
 }
 
 /* About Us Section */
-.about-section {
+.aboutus{
   position: absolute;
   top: 39px;
-  left: 80px;
-  width: 1760px;
   height: 489px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
   border-radius: 20px;
-  /*padding: 12px;*/
   box-sizing: border-box;
 }
 
 /* Title */
-.about-title {
+.aboutus_heading {
   font-family: 'Nuosu SIL', serif;
   font-weight: 400;
   font-size: 48px;
@@ -32,18 +33,17 @@
 
 /* Line under title */
 .about-line {
-  margin-top: 10px;
-  width: 1759px;
-  height: 1px;
-  background-color: black;
   border: none;
+  border-top: 1px solid #000000;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* Blurred content container */
-.about-content {
-  margin-top: 24px;
-  width: 1760px;
-  height: 396px;
+.aboutus_content_container{
+  height: 44vh;
   background-color: #F9E8F0;
   border: 1.13px solid #AFA6A8;
   border-radius: 20px;
@@ -54,24 +54,35 @@
   flex-direction: column;
   gap: 10px;
   justify-content: center;
+  text-align: center;
+  font-family: 'Abhaya Libre', serif;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  line-height: 1.2;
 }
 
-/* Paragraph text */
-.about-content p {
+.aboutus_content{
+  margin-top: 24px;
+  box-sizing: border-box;
+}
+
+.content_ls{
   font-family: 'Merienda One', cursive;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 100%;
   text-align: center;
   color: #000;
-  margin: 0;
+  text-align: center;
+  display: inline-block;
 }
 
 /* Special SIAM span */
-.siam-name {
+.content_siam {
   font-family: 'Abhaya Libre', serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 100%;
   text-align: center;
 }
