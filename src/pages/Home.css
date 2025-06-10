@@ -1,0 +1,220 @@
+/*.top{
+    width: 1293px;
+    height: 360px;
+    text-align: center;
+    align-items: center;
+}*/
+.home-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  background-color: #FBD3E6;
+}
+
+.home-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./home_bg.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;   /* ← This is the key */
+  background-position: center;  /* Optional: centers the image nicely */
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+.top_heading {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 100%;
+    color: #131313;
+    margin: 0;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.top_subheading{
+    height: 71;
+    top: 172px;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 34px;
+    letter-spacing: 0%;
+    color: #000000;
+    text-align: left;
+}
+
+.ls{
+    font-family: 'Merienda One', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.top-input-box {
+  width: 820px;
+  height: 60px;
+  background: #F9E8F0;
+  border: 1px solid #B2B2B2;
+  border-radius: 8px;
+  margin-left: 305px;
+  margin-right: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  backdrop-filter: blur(6px);
+}
+
+.top-news-input {
+  flex: 1;
+  resize: none;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+}
+
+.top-check-button {
+  width: 215px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3F367D;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 22px;
+  padding: 4px 68px;
+  padding-bottom: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.middle{
+  top: 50px;
+  height: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+  border-radius: 20px;
+  margin-top: 60px;
+  box-sizing: border-box;
+}
+
+.middle_heading {
+  font-family: 'Nuosu SIL', serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  color: #131313;
+  text-align: left;
+}
+
+.middle_line {
+  border: none;
+  border-top: 1px solid #000000;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.bottom{
+  margin-top: 60px;
+  height: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+}
+
+.bottom_heading {
+  font-family: 'Nuosu SIL', serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  color: #131313;
+  text-align: left;
+}
+
+.bottom_line {
+  border: none;
+  border-top: 1px solid #000000;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.bottom_heading span{
+  font-family: 'Merienda One', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.how-it-works-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.card-item {
+  width: 282px;
+  height: 108px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00000040;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #000000;
+}
+
+.card-item p{
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.card-icon {
+  width: 61px; /* Size of your icon container */
+  height: 61px; /* Size of your icon container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure image fits within the circle */
+}
+
+.card-icon svg{
+  color: #3F367D;
+  font-size: 65px;
+}
+
+.arrow {
+  font-size: 60px; /* Size of the arrow */
+  color:#2744838F;
+  font-weight: bold;
+}

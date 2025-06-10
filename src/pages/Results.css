@@ -1,0 +1,150 @@
+.results-wrapper {
+  position: relative;
+  min-height: 75vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.results-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./result_bg.jpg'); 
+  background-repeat: repeat;
+  background-size: auto; 
+  opacity: 0.3; 
+  z-index: -1;
+  pointer-events: none;
+}
+
+.middle-container {
+  display: flex;
+  margin-top: 50px;
+  padding: 0 81px;
+  gap: 20px;
+}
+
+.input-box {
+  width: 1164px;
+  height: 320px;
+  background: #F9E8F0;
+  border: 1px solid #B2B2B2;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  backdrop-filter: blur(6px);
+}
+
+textarea::placeholder {
+  color: #000;
+}
+
+.news-input {
+  flex: 1;
+  resize: none;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #000;
+  outline: none;
+}
+
+.check-button {
+  width: 215px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3F367D;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 24px;
+  padding: 4px 68px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.result-box {
+  width: 573px;
+  height: 350px;
+  background: #F9E8F0;
+  border: 1px solid #D2D2D2;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 100%;
+  color: #000;
+}
+
+.result-subtext {
+  font-size: 24px;
+  color: #000;
+}
+
+.source{
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.source_heading {
+  font-family: 'Nuosu SIL', serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  color: #131313;
+  margin: 0;
+  text-align: left;
+}
+
+.source-line {
+  border: none;
+  border-top: 1px solid #000000;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.source_content_container{
+  height: auto;
+  background-color: #F9E8F0;
+  border: 1.13px solid #AFA6A8;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  text-align: left;
+  font-family: 'Roboto', serif;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  line-height: 1.2;
+}
+
+.source_content{
+  margin-top: 24px;
+  box-sizing: border-box;
+}
