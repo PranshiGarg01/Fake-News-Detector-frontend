@@ -1,22 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Results.css';
 
 const Results = () => {
+  const location = useLocation();
   const [inputText, setInputText] = useState('');
-  const [result, setResult] = useState('80%');
-  const [showResult, setShowResult] = useState(false); // Control when to show result text
+  const [result, setResult] = useState(''); 
+  const [sources, setSources] = useState('');
+  const [showResult, setShowResult] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleCheck = () => {
-    console.log('Checking:', inputText);
-    // Add your logic here
-    setShowResult(true); // Show result text after check
+  useEffect(() => {
+    if (location.state?.inputText) {
+      setInputText(location.state.inputText);
+    }
+  }, [location.state]);
+
+  const handleCheck = async () => {
+    if (!inputText.trim()) {
+      setError('Please enter some text to check.');
+      setShowResult(false);
+      return;
+    }
+
+    setLoading(true);
+    setError('');
+    setShowResult(false);
+
+    try {
+      const response = await fetch('https://8f4b-2405-201-d002-b879-e8cc-b5a8-6db0-7b34.ngrok-free.app/check', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(inputText) 
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch results');
+      }
+
+      const data = await response.json();
+
+      setResult(data.accuracy);
+      setSources(data.sources);
+      setShowResult(true);
+    } catch (err) {
+      setError('Error fetching results: ' + err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="results-wrapper">
       <div className="results">
         <div className="middle-container">
-          {/* Left input area */}
           <div className="input-box">
             <textarea
               className="news-input"
@@ -24,12 +64,12 @@ const Results = () => {
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
             />
-            <button className="check-button" onClick={handleCheck}>
-              CHECK
+            <button className="check-button" onClick={handleCheck} disabled={loading}>
+              {loading ? 'Checking...' : 'CHECK'}
             </button>
+            {error && <div style={{ color: 'red', marginTop: 10 }}>{error}</div>}
           </div>
 
-          {/* Right result area - always visible, text shown conditionally */}
           <div className="result-box">
             {showResult && (
               <>
@@ -45,9 +85,11 @@ const Results = () => {
           <hr className="source-line" />
           <div className="source_content">
             <div className="source_content_container">
-              <div>
-                
-              </div>
+              {showResult ? (
+                <div>{sources}</div>
+              ) : (
+                <div style={{ fontStyle: 'italic', color: '#777' }}>Sources will appear here after checking.</div>
+              )}
             </div>
           </div>
         </div>
