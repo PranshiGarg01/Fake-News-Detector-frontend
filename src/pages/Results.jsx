@@ -29,12 +29,13 @@ const Results = () => {
     setShowResult(false);
 
     try {
+      const req_body = {"article": inputText}
       const response = await fetch('https://8f4b-2405-201-d002-b879-e8cc-b5a8-6db0-7b34.ngrok-free.app/check', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(inputText) 
+        body: JSON.stringify(req_body) 
       });
 
       if (!response.ok) {
@@ -74,7 +75,7 @@ const Results = () => {
             {showResult && (
               <>
                 <div className="result-text">{result}</div>
-                <div className="result-subtext">of the news is likely fake</div>
+                <div className="result-subtext">of the news is likely true</div>
               </>
             )}
           </div>
