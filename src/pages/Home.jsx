@@ -31,7 +31,7 @@ const Home = () => {
           Is this news real?
         </div>
         <div className="top_subheading">
-          <p>In today's digital age, misinformation spreads faster than ever — making it hard to tell what's true
+          <p>In today's digital age, misinformation spreads faster than ever - making it hard to tell what's true
             and what's not. <span className="ls">LieSpy</span> helps you verify news articles instantly, so you can stay informed with facts,
             not fiction.
           </p>

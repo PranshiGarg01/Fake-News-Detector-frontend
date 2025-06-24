@@ -30,7 +30,7 @@ const Results = () => {
 
     try {
       const req_body = {"article": inputText}
-      const response = await fetch('https://8f4b-2405-201-d002-b879-e8cc-b5a8-6db0-7b34.ngrok-free.app/check', {
+      const response = await fetch('https://f46b-2405-201-d002-b879-c0bb-9729-88b2-724e.ngrok-free.app/check', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

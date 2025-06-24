@@ -12,21 +12,15 @@ code {
     monospace;
 }
 
-/* Ensure root fills full height */
 html, body, #root {
   height: 100%;
   margin: 0;
 }
 
-/* Full height layout with sticky footer */
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Allow main to expand */
-.main-content {
-  flex: 1;
-}
 

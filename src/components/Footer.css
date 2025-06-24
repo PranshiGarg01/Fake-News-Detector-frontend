@@ -1,18 +1,17 @@
 .footer {
   width: 100%;
-  max-width: 1920px;
-  height: 222.66px;
+  height: 11.6vw;
   background: linear-gradient(90deg, #E78FC0 0%, #088685 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 278px;
+  padding: 2rem 14vw;
   box-sizing: border-box;
 }
 
 .footer-left {
-  width: 430.41px;
-  height: 133px;
+  width: 27vw;  
+  height: 12vw;  
   object-fit: contain;
 }
 
@@ -24,7 +23,8 @@
 
 .footer-right {
   display: flex;
-  gap: 40px;
+  gap: 3.5vw;
+  align-items: center;
 }
 
 
@@ -36,28 +36,33 @@
 
 
 .footer-icon.insta img {
-  width: 55.01px;
-  height: 62px;
+  width: 3.5vw; 
+  height: 4vw;
 }
 
 .footer-icon.youtube img {
-  width: 41.26px;
-  height: 46.5px;
+  width: 3vw; 
+  height: 3.4vw; 
+}
+
+.footer-icon.linkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-icon.linkedin img {
-  width: 46.42px;
-  height: 46.42px;
-  padding-top: 24px;
+  width: 3.3vw;  
+  height: 3.3vw;
 }
 
 .footer-icon.medium img {
-  width: 63px;
-  height: 49.86px;
+  width: 4.5vw;  
+  height: 3.3vw;
 }
 
 .footer-icon.github img {
-  width: 53.5px;
-  height: 53.5px;
+  width: 3.6vw;  
+  height: 3.6vw; 
 }
 

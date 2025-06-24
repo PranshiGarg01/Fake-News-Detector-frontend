@@ -1,102 +1,90 @@
-/* Overall Page */
-.aboutus_bg{
+.aboutus_bg {
+  min-height: 100%; 
   width: 100%;
-  height: 100%;
-  max-width: 1920px;
-  height: 769px;
   background: linear-gradient(261.73deg, #FBB3DB 1.27%, #FFE8F5 48.66%, #FBB3DB 96.97%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll; 
+  background-position: center;
   position: relative;
   overflow: hidden;
 }
 
-/* About Us Section */
-.aboutus{
-  position: absolute;
-  top: 39px;
-  height: 489px;
-  padding-left: 55px;
-  padding-right: 80px;
+.aboutus {
+  position: relative;
+  padding: 2rem 4rem;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   box-sizing: border-box;
+  height: auto; 
 }
 
-/* Title */
 .aboutus_heading {
   font-family: 'Nuosu SIL', serif;
   font-weight: 400;
-  font-size: 48px;
-  line-height: 100%;
+  font-size: 3rem; 
+  line-height: 1;
   color: #131313;
   margin: 0;
   text-align: left;
 }
 
-/* Line under title */
 .about-line {
   border: none;
   border-top: 1px solid #000000;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 5rem; 
+  padding-right: 5rem; 
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* Blurred content container */
-.aboutus_content_container{
-  height: 44vh;
+.aboutus_content_container {
+  height: auto;
   background-color: #F9E8F0;
-  border: 1.13px solid #AFA6A8;
-  border-radius: 20px;
+  border: 0.07rem solid #AFA6A8; 
+  border-radius: 1.25rem; 
   backdrop-filter: blur(10px);
-  padding: 24px;
+  padding: 1.5rem; 
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem; 
   justify-content: center;
   text-align: center;
   font-family: 'Abhaya Libre', serif;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  font-size: 1.25rem; 
   line-height: 1.2;
 }
 
-.aboutus_content{
-  margin-top: 24px;
+.aboutus_content {
+  margin-top: 1.5rem; 
   box-sizing: border-box;
-  margin-bottom: 45px;
+  margin-bottom: 2.81rem; 
 }
 
-.content_ls{
+.content_ls {
   font-family: 'Merienda One', cursive;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 100%;
+  font-size: 1.5rem; 
+  line-height: 1;
   text-align: center;
   color: #000;
-  text-align: center;
   display: inline-block;
 }
 
-/* Special SIAM span */
 .content_siam {
   font-family: 'Abhaya Libre', serif;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 100%;
+  font-size: 1.5rem; 
+  line-height: 1;
   text-align: center;
 }
-
-
-/*Team Content*/
 
 .team_heading {
   font-family: 'Nuosu SIL', serif;
   font-weight: 400;
-  font-size: 48px;
-  line-height: 100%;
+  font-size: 3rem;
+  line-height: 1;
   color: #131313;
   margin: 0;
   text-align: left;
@@ -105,80 +93,87 @@
 .team-line {
   border: none;
   border-top: 1px solid #000000;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 5rem; 
+  padding-right: 5rem;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
 .team-container {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 1.25rem; 
   justify-content: center;
-  padding-top: 20px;
+  padding: 1.25rem;
+  box-sizing: border-box;
 }
 
 .card {
-  width: 400px;
-  height: 100px;
+  flex: 0 1 23rem; 
+  max-width: 25rem;
+  height: auto; 
   background-image: url('https://ik.imagekit.io/wwvahmwmb/team_bg.jpg?updatedAt=1749392754875');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-  border-radius: 16px;
-  padding: 20px 30px;
+  border-radius: 1rem; 
+  padding: 2.4rem 1.875rem; 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); 
   position: relative;
-  overflow:auto;
+  overflow: visible;
 }
-
 
 .card-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  gap: 0.5rem;
 }
 
 .member-info {
+  flex: 1 1 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0; 
+  overflow-wrap: break-word;
 }
 
 .name {
   font-family: "Numans", sans-serif;
-  font-size: 25px;
+  font-size: 1.56rem; 
   font-weight: 400;
-  line-height: 100%;
+  line-height: 1;
   color: #000000;
   margin: 0;
 }
 
 .role {
   font-family: 'Nuosu SIL', serif;
-  font-size: 18px;
+  font-size: 1.125rem; 
   font-weight: 400;
-  line-height: 100%;
+  line-height: 1;
   color: #000000;
-  margin: 20px 0 0;
+  margin: 1.25rem 0 0 0; 
 }
 
 .social-icons {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem; 
 }
 
 .icon {
-  height: 44px;
-  width: 44px;
+  height: 2.75rem; 
+  width: 2.75rem;
   object-fit: contain;
 }
 
 .linkedin {
-  width: 39px;
-  height: 39px;
+  width: 2.44rem; 
+  height: 2.44rem;
 }
